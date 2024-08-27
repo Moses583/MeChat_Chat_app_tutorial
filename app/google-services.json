@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913515867897",
+    "project_id": "mechat-3e2ec",
+    "storage_bucket": "mechat-3e2ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913515867897:android:df725d8c21aaf841cffc28",
+        "android_client_info": {
+          "package_name": "com.ravemaster.mechat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjEL8Hppmw_FpzgtX-cu2w-7fledtISmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

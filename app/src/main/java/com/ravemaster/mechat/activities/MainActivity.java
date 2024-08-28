@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgLogOut,profileImage;
     CardView one,two;
     PreferenceManager preferenceManager;
+    FloatingActionButton newChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         imgLogOut.setOnClickListener(view -> {
             signOut();
+        });
+
+        newChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), UsersActivity.class));
+            }
         });
 
     }
@@ -89,12 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 .document(preferenceManager.getString(Constants.KEY_USER_ID));
 
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        showToasts("Token updated successfully");
-                    }
-                })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -120,5 +124,6 @@ public class MainActivity extends AppCompatActivity {
         one = findViewById(R.id.cardViewOne);
         two = findViewById(R.id.cardViewTwo);
         profileImage = findViewById(R.id.imgProfileImage);
+        newChat = findViewById(R.id.btnNewChat);
     }
 }

@@ -16,4 +16,6 @@
     <string name="log_in_two">Log in</string>
     <string name="log_out_button">Log out button</string>
     <string name="this_is_a_sample_text">This is a sample text</string>
+    <string name="error_loading_users">Error loading users</string>
+    <string name="users">Users</string>
 </resources>

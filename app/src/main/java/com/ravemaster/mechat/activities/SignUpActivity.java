@@ -44,7 +44,7 @@ import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
     TextView txtGoToLogIn;
-    String encodedImage;
+    String encodedImage = "";
     TextInputLayout username,email,password,confirmPassword;
     EditText one,two,three,four;
     Button button;

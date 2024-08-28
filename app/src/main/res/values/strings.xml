@@ -14,4 +14,6 @@
     <string name="confirm_password">Confirm password</string>
     <string name="create_account_two">Create account</string>
     <string name="log_in_two">Log in</string>
+    <string name="log_out_button">Log out button</string>
+    <string name="this_is_a_sample_text">This is a sample text</string>
 </resources>

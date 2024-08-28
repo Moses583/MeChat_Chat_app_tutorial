@@ -64,15 +64,29 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/log_in"
-            android:layout_marginEnd="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/button_style"
-            android:id="@+id/btnSignIn"/>
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="30dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/button_style"
+                android:id="@+id/btnSignIn"
+                android:layout_centerInParent="true"
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/myProgressBar2"
+                android:visibility="invisible"/>
+        </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
